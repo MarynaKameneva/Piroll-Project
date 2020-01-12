@@ -1,13 +1,13 @@
 * {
   box-sizing: border-box; }
 
-.conteiner {
+.container {
   max-width: 1170px;
   width: 100%;
   margin: 0 auto;
   padding: 0 15px; }
 
-/* Ba-grid */
+/* Ba-grid  */
 .ba-row {
   display: flex;
   flex-wrap: wrap;
@@ -17,13 +17,10 @@
 .ba-row + .ba-row {
   margin-top: 1rem; }
 
-[class^="ba-col"] {
+[class^='ba-col'] {
   padding-left: 15px;
   padding-right: 15px;
   width: 100%; }
-
-.m {
-  margin-bottom: 15px; }
 
 .ba-col-1 {
   width: 8.33333%; }
@@ -61,15 +58,15 @@
 .ba-col-12 {
   width: 100%; }
 
-/* Ba-common */
+/* ba-common */
 .ba-text-center {
   text-align: center; }
 
-.ba-text-right {
-  text-align: right; }
-
 .ba-text-left {
   text-align: left; }
+
+.ba-text-right {
+  text-align: right; }
 
 .ba-text-justify {
   text-align: justify; }

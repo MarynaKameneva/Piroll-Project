@@ -1,23 +1,27 @@
-//variables
-$conteinerWidth: 1170px;
+$container: 1170px;
 $gap: 15px;
-$columnsCount: 12;
-$colWidth: 100% / $columnsCount;
+$col: 12;
+$colWidth: 100% / $col;
 
-* {
-    box-sizing: border-box;
+$primaryColor: pink;
+$secondaryColor: #4e4e4e;
+
+$btnBorderColor: $primaryColor;
+
+
+*{
+    box-sizing: border-box
 }
 
-.conteiner {
-    max-width: $conteinerWidth;
+.container{
+    max-width: $container;
     width: 100%;
     margin: 0 auto;
     padding: 0 $gap;
 }
 
-/* Ba-grid */
-
-.ba-row {
+/* Ba-grid  */
+.ba-row{
     display: flex;
     flex-wrap: wrap;
     margin-left: -$gap;
@@ -28,37 +32,43 @@ $colWidth: 100% / $columnsCount;
     margin-top: 1rem;
 }
 
-[class^="ba-col"] {
-    padding-left: $gap;
-    padding-right: $gap;
+[class^='ba-col']{
+    padding-left: 15px;
+    padding-right: 15px;
     width: 100%;
 }
 
-.m {
-    margin-bottom: $gap;
-}
-
-@for $i from 1 through $columnsCount {
-    .ba-col-#{$i} {
+@for $i from 1 through $col {
+    .ba-col-#{$i}{
         width: $colWidth * $i;
     }
 }
 
-/* Ba-common */
 
-.ba-text-center {
+// mixins
+@mixin buttonHover {
+    background-color: pink;
+    border-color: darken($btnBorderColor, 15%)
+
+}
+
+
+
+
+/* ba-common */
+
+.ba-text-center{
     text-align: center;
 }
 
-.ba-text-right {
-    text-align: right;
-}
-
-.ba-text-left {
+.ba-text-left{
     text-align: left;
 }
-
-.ba-text-justify {
+.ba-text-right{
+    text-align: right;
+}
+.ba-text-justify{
     text-align: justify;
 }
+
 
